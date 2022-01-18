@@ -8,6 +8,7 @@ export default function Home() {
         muted={true}
         className="react-player"
         playing={true}
+        playsinline={true}
         loop={true}
         width="100%"
         height="100%"

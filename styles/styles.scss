@@ -1,10 +1,22 @@
-.player-wrapper {
-  position: relative;
-  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+body {
+  height: 100vw;
+  margin: 0;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
+#_next {
+  height: 100vw;
+  margin: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.player-wrapper > div {
+  position: relative;
+}
+
+.react-player video {
+  width: 100vw !important;
+  height: 100vh !important;
 }
