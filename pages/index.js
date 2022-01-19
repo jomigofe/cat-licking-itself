@@ -49,6 +49,15 @@ export default function Home() {
           })`,
         }}
       ></div>
+      <a href="https://github.com/jomigofe/cat-licking-itself" target="_blank">
+        <img
+          className="githubholder"
+          src="https://socialify.git.ci/jomigofe/cat-licking-itself/image?font=Rokkitt&language=1&owner=1&pattern=Solid&stargazers=1&theme=Dark"
+          alt="cat-licking-itself"
+          width="640"
+          height="320"
+        />
+      </a>
     </div>
   );
 }
