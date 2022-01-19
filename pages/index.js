@@ -1,6 +1,7 @@
 import ReactPlayer from "react-player";
 import { useEffect, useRef } from "react";
 import useMouse from "@react-hook/mouse-position";
+import Image from "next/image";
 
 const imageList = [
   "/images/signal-2022-01-18-205223_001.jpeg",
@@ -20,15 +21,16 @@ function randomNumber(max) {
 
 export default function Home() {
   const ref = useRef(null);
-
   const mouse = useMouse(ref);
 
-  useEffect(() => {
-    console.log(mouse);
-  }, [mouse]);
-
   return (
-    <div ref={ref} className="player-wrapper">
+    <div
+      style={{
+        backgroundImage: `url(${imageList[randomNumber(imageList.length)]})`,
+      }}
+      ref={ref}
+      className="player-wrapper"
+    >
       <ReactPlayer
         url="/signal-2022-01-18-171220_001.mp4"
         muted={true}
@@ -39,16 +41,23 @@ export default function Home() {
         width="100%"
         height="100%"
       />
+
       <div
-        className="image-wrapper"
+        className="image-wrapper-container"
         style={{
           top: `${mouse.y}px`,
           left: `${mouse.x}px`,
-          "--background-image": `url(${
-            imageList[randomNumber(imageList.length)]
-          })`,
         }}
-      ></div>
+      >
+        <Image
+          className="image-wrapper"
+          // src={imageList[randomNumber(imageList.length)]}
+          src={imageList[randomNumber(imageList.length)]}
+          width={100}
+          height={100}
+        />
+      </div>
+
       <a href="https://github.com/jomigofe/cat-licking-itself" target="_blank">
         <img
           className="githubholder"
