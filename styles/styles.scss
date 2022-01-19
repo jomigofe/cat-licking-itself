@@ -12,11 +12,26 @@ body {
   overflow: hidden;
 }
 
-.player-wrapper > div {
+.player-wrapper {
+  background-color: red;
+}
+
+.react-player {
   position: relative;
 }
 
 .react-player video {
   width: 100vw !important;
   height: 100vh !important;
+}
+
+.image-wrapper {
+  position: absolute;
+  width: 10vw;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
 }
