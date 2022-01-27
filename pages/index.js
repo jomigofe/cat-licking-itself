@@ -1,6 +1,7 @@
 import ReactPlayer from "react-player";
 import { useEffect, useRef } from "react";
 import useMouse from "@react-hook/mouse-position";
+import Script from "next/script";
 
 const imageList = [
   "/images/signal-2022-01-18-205223_001.jpeg",
@@ -30,6 +31,19 @@ export default function Home() {
       ref={ref}
       className="player-wrapper"
     >
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-8FRPKV3DCJ"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-8FRPKV3DCJ');
+        `}
+      </Script>
       <ReactPlayer
         url="/signal-2022-01-18-171220_001.mp4"
         muted={true}
@@ -50,7 +64,6 @@ export default function Home() {
       >
         <img
           className="image-wrapper"
-          // src={imageList[randomNumber(imageList.length)]}
           src={imageList[randomNumber(imageList.length)]}
           width={100}
         />
