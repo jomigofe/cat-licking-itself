@@ -4,14 +4,16 @@ import useMouse from "@react-hook/mouse-position";
 import Script from "next/script";
 
 const imageList = [
-  "/images/signal-2022-01-18-205223_001.jpeg",
-  "/images/signal-2022-01-18-205223_003.jpeg",
-  "/images/signal-2022-01-18-205223_004.jpeg",
-  "/images/signal-2022-01-18-205223_005.jpeg",
-  "/images/signal-2022-01-18-205223_006.jpeg",
-  "/images/signal-2022-01-18-205223_007.jpeg",
-  "/images/signal-2022-01-18-205223_008.jpeg",
-  "/images/signal-2022-01-18-205223_009.jpeg",
+  "/images/rocky_01.png",
+  "/images/rocky_02.png",
+  "/images/rocky_03.png",
+  "/images/rocky_04.png",
+  "/images/rocky_05.png",
+  "/images/rocky_06.png",
+  "/images/rocky_07.png",
+  "/images/rocky_08.png",
+  "/images/rocky_09.png",
+  "/images/rocky_10.png",
 ];
 
 //function that returns a random number between 0 and the length of the imageList array
